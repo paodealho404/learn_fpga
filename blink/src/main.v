@@ -1,6 +1,6 @@
 module main (
-    input sys_clk,
-    input sys_rst_n,
+    input      sys_clk,
+    input      sys_rst_n,
     output reg led
 );
 
