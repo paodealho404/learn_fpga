@@ -7,7 +7,7 @@ module transmitter (
     output reg        busy
 );
 
-    parameter integer CLK_FREQ = 24_000_000;
+    parameter integer CLK_FREQ = 27_000_000;
     parameter integer BAUD_RATE = 115200;
     localparam integer CYC_PER_BIT = CLK_FREQ / BAUD_RATE;
 

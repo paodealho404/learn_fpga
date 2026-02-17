@@ -1,0 +1,16 @@
+# Ignore implementation directories (synthesis, place & route outputs)
+impl/
+**/impl/
+
+# Ignore VCD waveform dumps
+*.vcd
+
+# Ignore simulation outputs
+*.vvp
+*.o
+*.vpi
+
+# Ignore IDE and build artifacts
+*.gprj.user
+*.user
+.DS_Store

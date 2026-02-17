@@ -15,7 +15,7 @@ module tb_main;
     );
 
 
-    localparam real CLK_FREQ = 24_000_000;  // 24 MHz
+    localparam real CLK_FREQ = 27_000_000;  // 27 MHz
     localparam real CLK_PERIOD = 1e9 / CLK_FREQ;  // Clock period in nanoseconds
 
     initial clk = 0;

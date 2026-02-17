@@ -16,7 +16,6 @@ module main (
     wire [7:0] tx_captured;
     wire       tx_captured_ready;
 
-
     receiver uart_receiver (
         .clk       (clk),
         .rst_n     (rst_n),
@@ -24,7 +23,6 @@ module main (
         .data_out  (data_buffer),
         .data_ready(data_ready)
     );
-
 
     transmitter uart_transmitter (
         .clk     (clk),
@@ -35,17 +33,14 @@ module main (
         .busy    (tx_busy)
     );
 
-    // Monitor de TX - captura o que foi transmitido
-
     receiver tx_monitor (
         .clk       (clk),
         .rst_n     (rst_n),
-        .rx        (tx),                // conecta ao TX!
+        .rx        (tx),
         .data_out  (tx_captured),
         .data_ready(tx_captured_ready)
     );
 
-    // Buffer de debug - armazena último byte capturado do TX
     reg [7:0] last_tx_captured;
 
     always @(posedge clk or negedge rst_n) begin
