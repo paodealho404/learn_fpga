@@ -1,6 +1,5 @@
 # Ignore implementation directories (synthesis, place & route outputs)
-impl/
-**/impl/
+**/impl/*
 
 # Ignore VCD waveform dumps
 *.vcd
